@@ -3,6 +3,13 @@ libaisdec is a library to decode ais packets as documented in ITU-R M.1371-4.
 
 It requires the bdec decoder library (www.protocollogic.com).
 
+https://github.com/asdf1011/bdec
+
+The easiest way to install bdec is to use python's easy_install 
+(https://pypi.python.org/pypi/setuptools#installation-instructions) application. 
+Run: easy_install bdec
+
+
 To decode an aivdm encoded file, run
 
    ./decode.py somefile.aivdm
@@ -21,3 +28,4 @@ In code, populate the generated Aivdm structure (in aivdm.h) (one byte per
 array entry), and call the encodeAivdm function to get the binary
 representation. Pass this encoded buffer in the EncodedBuffer structure
 to decodePacket in 'packet.h'.
+
